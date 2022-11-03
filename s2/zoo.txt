@@ -1,0 +1,88 @@
+A Tour through the Visualization Zoo
+
+The goal of visualization is to aid our understanding of data by leveraging the human visual system’s highly tuned ability to see patterns, spot trends, and identify outliers. Well-designed visual representations can replace cognitive calculations with simple perceptual inferences and improve comprehension, memory, and decision making.
+The challenge is that for any given data set the number of visual encodings—and thus the space of possible visualization designs—is extremely large.
+This article provides a brief tour through the “visualization zoo,” showcasing techniques for visualizing and interacting with diverse data sets.
+Here we focus on a few of the more sophisticated and unusual techniques that deal with complex data sets.
+we cover some of the more exotic (but practically useful!) forms of visual data representation, starting with one of the most common, time-series data; continuing on to statistical data and maps; and then completing the tour with hierarchies and networks. Along the way, bear in mind that all visualizations share a common “DNA”—a set of mappings between data properties and visual attributes such as position, size, shape, and color—and that customized species of visualization might always be constructed by varying these encodings.
+Most of the visualizations shown here are accompanied by interactive examples. The live examples were created using Protovis (http://vis.stanford.edu/protovis/), an open source language for Web-based data visualization.
+
+TIME-SERIES DATA
+INDEX CHARTS
+An index chart is an interactive line chart that shows percentage changes for a collection of time-series data based on a selected index point.
+
+STACKED GRAPHS
+Other forms of time-series data may be better seen in aggregate. By stacking area charts on top of each other, we arrive at a visual summation of time-series values—a stacked graph. This type of graph (sometimes called a stream graph) depicts aggregate patterns and often supports drill-down into a subset of individual series.
+A stacked graph does not support negative numbers and is meaningless for data that should not be summed (temperatures, for example).
+Moreover, stacking may make it difficult to accurately interpret trends that lie atop other curves. Interactive search and filtering is often used to compensate for this problem.
+
+SMALL MULTIPLES
+In lieu of stacking, multiple time series can be plotted within the same axes, as in the index chart. Placing multiple series in the same space may produce overlapping curves that reduce legibility, however. An alternative approach is to use small multiples: showing each series in its own chart.
+While we are considering time-series data, note that small multiples can be constructed for just about any type of visualization: bar charts, pie charts, maps, etc. This often produces a more effective visualization than trying to coerce all the data into a single plot.
+
+HORIZON GRAPHS
+The horizon graph is a technique for increasing the data density of a time-series view while preserving resolution.
+
+STATISTICAL DISTRIBUTIONS
+one important use of visualizations is exploratory data analysis: gaining insight into how data is distributed to inform data transformation and modeling decisions. Common techniques include the histogram, which shows the prevalence of values grouped into bins, and the box-and-whisker plot, which can convey statistical features such as the mean, median, quartile boundaries, or extreme outliers. In addition, a number of other techniques exist for assessing a distribution and examining interactions between multiple dimensions.
+
+STEM-AND-LEAF PLOTS
+For assessing a collection of numbers, one alternative to the histogram is the stem-and-leaf plot. It typically bins numbers according to the first significant digit, and then stacks the values within each bin by the second significant digit.
+
+Q-Q PLOTS
+Though the histogram and the stem-and-leaf plot are common tools for assessing a frequency distribution, the Q-Q (quantile-quantile) plot is a more powerful tool. The Q-Q plot compares two probability distributions by graphing their quantiles (http://en.wikipedia.org/wiki/Quantile) against each other. If the two are similar, the plotted values will lie roughly along the central diagonal. If the two are linearly related, values will again lie along a line, though with varying slope and intercept.
+
+SPLOM (SCATTER PLOT MATRIX)
+Other visualization techniques attempt to represent the relationships among multiple variables. Multivariate data occurs frequently and is notoriously hard to represent, in part because of the difficulty of mentally picturing data in more than three dimensions. One technique to overcome this problem is to use small multiples of scatter plots showing a set of pairwise relations among variables, thus creating the SPLOM (scatter plot matrix). A SPLOM enables visual inspection of correlations between any pair of variables.
+interaction techniques such as brushing-and-linking—in which a selection of points on one graph highlights the same points on all the other graphs—can be used to explore patterns within the data.
+
+PARALLEL COORDINATES
+Parallel coordinates (||-coord), shown in figure 2D, take a different approach to visualizing multivariate data. Instead of graphing every pair of variables in two dimensions, we repeatedly plot the data on parallel axes and then connect the corresponding points with lines. Each poly-line represents a single row in the database, and line crossings between dimensions often indicate inverse correlation. Reordering dimensions can aid pattern finding, as can interactive querying to filter along one or more dimensions.
+
+MAPS
+Many maps are based upon a cartographic projection: a mathematical function that maps the three-dimensional geometry of the Earth to a two-dimensional image. Other maps knowingly distort or abstract geographic features to tell a richer story or highlight specific data.
+
+FLOW MAPS
+By placing stroked lines on top of a geographic map, a flow map can depict the movement of a quantity in space and (implicitly) in time. Flow lines typically encode a large amount of multivariate information: path points, direction, line thickness, and color can all be used to present dimensions of information to the viewer.
+
+CHOROPLETH MAPS
+Data is often collected and aggregated by geographical areas such as states. A standard approach to communicating this data is to use a color encoding of the geographic area, resulting in a choropleth map.
+One common error is to encode raw data values (such as population) rather than using normalized values to produce a density map. Another issue is that one’s perception of the shaded value can also be affected by the underlying area of the geographic region.
+
+GRADUATED SYMBOL MAPS
+An alternative to the choropleth map is the graduated symbol map, which places symbols over an underlying map. This approach avoids confounding geographic area with data values and allows for more dimensions to be visualized (e.g., symbol size, shape, and color). In addition to simple shapes such as circles, graduated symbol maps may use more complicated glyphs such as pie charts.
+
+CARTOGRAMS
+A cartogram distorts the shape of geographic regions so that the area directly encodes a data variable. A common example is to redraw every country in the world sizing it proportionally to population or gross domestic product.
+
+HIERARCHIES
+While some data is simply a flat collection of numbers, most can be organized into natural hierarchies. Consider: spatial entities, such as counties, states, and countries; command structures for businesses and governments; software packages and phylogenetic trees. Even for data with no apparent hierarchy, statistical methods (e.g., k-means clustering) may be applied to organize data empirically. Special visualization techniques exist to leverage hierarchical structure, allowing rapid multiscale inferences: micro-observations of individual elements and macro-observations of large groups. 
+
+NODE-LINK DIAGRAMS
+The word tree is used interchangeably with hierarchy, as the fractal branches of an oak might mirror the nesting of data. If we take a two-dimensional blueprint of a tree, we have a popular choice for visualizing hierarchies: a node-link diagram. Many different tree-layout algorithms have been designed; the Reingold-Tilford algorithm
+An alternative visualization scheme is the dendrogram (or cluster) algorithm, which places leaf nodes of the tree at the same level.
+Using polar rather than Cartesian coordinates has a pleasing aesthetic, while using space more efficiently.
+Although the indented tree requires excessive vertical space and does not facilitate multiscale inferences, it does allow efficient interactive exploration of the tree to find a specific node. In addition, it allows rapid scanning of node labels, and multivariate data such as file size can be displayed adjacent to the hierarchy.
+
+ADJACENCY DIAGRAMS
+The adjacency diagram is a space-filling variant of the node-link diagram; rather than drawing a link between parent and child in the hierarchy, nodes are drawn as solid areas (either arcs or bars), and their placement relative to adjacent nodes reveals their position in the hierarchy.
+Because the nodes are now space-filling, however, we can use a length encoding for the size of software classes and packages. This reveals an additional dimension that would be difficult to show in a node-link diagram.
+
+ENCLOSURE DIAGRAMS
+The enclosure diagram is also space filling, using containment rather than adjacency to represent the hierarchy. Introduced by Ben Shneiderman in 1991, a treemap recursively subdivides area into rectangles. As with adjacency diagrams, the size of any node in the tree is quickly revealed.
+Squarified treemaps use approximately square rectangles, which offer better readability and size estimation than a naive “slice-and-dice” subdivision. Fancier algorithms such as Voronoi and jigsaw treemaps also exist but are less common.
+By packing circles instead of subdividing rectangles, we can produce a different sort of enclosure diagram that has an almost organic appearance.
+
+NETWORKS
+In addition to organization, one aspect of data that we may wish to explore through visualization is relationship. For example, given a social network, who is friends with whom? Who are the central players?
+a hierarchy is a specialized form of network: each node has exactly one link to its parent, while the root node has no links. Thus node-link diagrams are also used to visualize networks, but the loss of hierarchy means a different algorithm is required to position nodes.
+Mathematicians use the formal term graph to describe a network. A central challenge in graph visualization is computing an effective layout. Layout techniques typically seek to position closely related nodes (in terms of graph distance, such as the number of links between nodes, or other metrics) close in the drawing; critically, unrelated nodes must also be placed far enough apart to differentiate relationships. Some techniques may seek to optimize other visual features—for example, by minimizing the number of edge crossings.
+
+FORCE-DIRECTED LAYOUTS
+A common and intuitive approach to network layout is to model the graph as a physical system: nodes are charged particles that repel each other, and links are dampened springs that pull related nodes together. A physical simulation of these forces then determines the node positions; approximation techniques that avoid computing all pairwise forces enable the layout of large numbers of nodes. In addition, interactivity allows the user to direct the layout and jiggle nodes to disambiguate links. Such a force-directed layout is a good starting point for understanding the structure of a general undirected graph.
+
+ARC DIAGRAMS
+An arc diagram, shown in figure 5B, uses a one-dimensional layout of nodes, with circular arcs to represent links. Though an arc diagram may not convey the overall structure of the graph as effectively as a two-dimensional layout, with a good ordering of nodes it is easy to identify cliques and bridges. Further, as with the indented-tree layout, multivariate data can easily be displayed alongside nodes. The problem of sorting the nodes in a manner that reveals underlying cluster structure is formally called seriation and has diverse applications in visualization, statistics, and even archaeology.
+
+MATRIX VIEWS
+Mathematicians and computer scientists often think of a graph in terms of its adjacency matrix: each value in row i and column j in the matrix corresponds to the link from node i to node j. Given this representation, an obvious visualization then is: just show the matrix! Using color or saturation instead of text allows values associated with the links to be perceived more rapidly.
