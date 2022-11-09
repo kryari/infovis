@@ -5,8 +5,8 @@ Week1:
 
 Visualizations:
 
-1. [Tableau](https://github.com/kryari/infovis/blob/main/s1/tableau.html)
-2. [HolaMundo](https://github.com/kryari/infovis/blob/main/s1/holamundo.html)
+1. [Tableau](https://kryari.github.io/infovis/s1/tableau.html)
+2. [HolaMundo](https://kryari.github.io//infovis/s1/holamundo.html)
 3. BumpRawGraphs
 4. Skated Area Charts
 
