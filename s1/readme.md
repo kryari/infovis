@@ -1,6 +1,7 @@
-aca van a ir todas las cosas de la semana1
+Semana 1:
 
-makeovermonday 2022 w43
+**Makeovermonday 2022 [week43](https://data.world/makeovermonday/2022w44)**
+
 tableau
 
 Why some MLB Pitchers are abandoning fastball
