@@ -1,6 +1,6 @@
 Week1:
 
-**Makeovermonday 2022 [week43](https://data.world/makeovermonday/2022w43)**
+**Makeovermonday 2022 [week43](https://data.world/makeovermonday/2022w43)** \
 *Why some MLB Pitchers are abandoning fastball*
 
 Visualizations:
