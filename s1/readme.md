@@ -7,7 +7,7 @@ Visualizations:
 
 1. [Tableau](https://kryari.github.io/infovis/s1/tableau.html)
 2. [HolaMundo](https://kryari.github.io//infovis/s1/holamundo.html)
-3. BumpRawGraphs
+3. [BumpRawGraphs](https://kryari.github.io/infovis/s1/bump.html)
 4. Skated Area Charts
 
 
