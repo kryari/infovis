@@ -7,7 +7,7 @@ Week 2
   
     Visualizations:
  1. [Tableau](https://kryari.github.io/infovis/s1/tableau.html)
- 2. Florish \
+ 2. Flourish \
     i. [Graph1](https://kryari.github.io/infovis/s1/bump.html) \
     ii. [Graph2](https://kryari.github.io/infovis/s1/bump.svg)
 <!-- 4. Skated Area Charts -->
