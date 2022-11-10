@@ -1,4 +1,4 @@
+Week 2
 
-A Tour to the Visualization Zoo
 
-1. [Zoo](https://kryari.github.io/kryari/infovis/s2/zoo.txt)
+1. [Summary - *A Tour to the Visualization Zoo*](https://kryari.github.io/infovis/s2/zoo.txt)
