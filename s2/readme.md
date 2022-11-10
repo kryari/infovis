@@ -2,7 +2,7 @@ Week 2
 
 - [**Summary - A Tour to the Visualization Zoo**](https://kryari.github.io/infovis/s2/zoo.txt)
 - **Makeovermonday 2022 [week44](https://data.world/makeovermonday/2022w44)** \
-  *Fundraising by Members of the 117th Congress*
+  *Fundraising by Members of the 117th Congress* \
   Source: [OpenSecrets](https://www.opensecrets.org/members-of-congress/members-list)
   
     Visualizations:
