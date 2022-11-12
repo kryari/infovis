@@ -5,9 +5,9 @@ Week 2
   *Fundraising by Members of the 117th Congress* \
   Source: [OpenSecrets](https://www.opensecrets.org/members-of-congress/members-list)
   
-    Visualizations:
- 1. [Tableau](https://kryari.github.io/infovis/s1/tableau.html)
- 2. Flourish \
-    i. [Graph1](https://kryari.github.io/infovis/s1/bump.html) \
-    ii. [Graph2](https://kryari.github.io/infovis/s1/bump.svg)
+<!--    Visualizations: -->
+<!-- 1. [Tableau](https://kryari.github.io/infovis/s1/tableau.html) -->
+<!-- 2. Flourish \ -->
+<!--    i. [Graph1](https://kryari.github.io/infovis/s1/bump.html) \ -->
+<!--    ii. [Graph2](https://kryari.github.io/infovis/s1/bump.svg) -->
 <!-- 4. Skated Area Charts -->
