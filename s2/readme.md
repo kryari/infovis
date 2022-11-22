@@ -5,6 +5,10 @@ Week 2
   *Fundraising by Members of the 117th Congress* \
   Source: [OpenSecrets](https://www.opensecrets.org/members-of-congress/members-list)
   
+    Visualizations:
+ 1. [Tableau](https://kryari.github.io/infovis/s2/momw44.html)
+  
+  
 <!--    Visualizations: -->
 <!-- 1. [Tableau](https://kryari.github.io/infovis/s1/tableau.html) -->
 <!-- 2. Flourish \ -->
