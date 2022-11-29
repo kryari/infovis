@@ -13,4 +13,5 @@ Make over Monday 45 \
 Casos COVID-19 en Argentina
 
 **[Week 4](https://kryari.github.io/infovis/s4)** \
-Use of time
+Use of time \
+Vast Challenge
